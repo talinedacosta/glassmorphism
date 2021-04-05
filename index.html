@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        main {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background-image: linear-gradient(to right, rgb(251 219 130), rgb(247 156 107));
+        }
+
+        article {
+            position: relative;
+            max-width: 500px;
+            max-height: 300px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+        }
+
+        article .presentation {
+            background-color: rgb(255 255 255 / 10%);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.104);
+            box-shadow: 5px 10px 32px 0 rgba(0, 0, 0, 0.116);
+        }
+
+        article .presentation h1 {
+            color: #fff;
+            align-self: start;
+        }
+
+        article .presentation img {
+            width: 100px;
+            height: 100px;
+            border: 5px solid #fff;
+            border-radius: 100px;
+            box-shadow: 5px 10px 32px 0 rgba(0, 0, 0, 0.116);
+            align-self: end;
+        }
+
+        article .presentation {
+            display: grid;
+            justify-content: center;
+        }
+
+        article .history {
+            background-color: rgb(247 160 108 / 64%);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.104);
+            box-shadow: 5px 10px 32px 0 rgba(0, 0, 0, 0.116);
+            padding: 10px;
+        }
+
+        article .history q {
+            font-size: 13px;
+            color: #fff;
+            margin: 0;
+        }
+
+        article .history address {
+            color: rgb(238, 115, 49);
+            padding-top: 5px;
+            font-size: 11px;
+            float: right;
+        }
+
+        img.back {
+            max-width: 150px;
+            position: absolute;
+        }
+
+        img.back:nth-of-type(1) {
+            z-index: -1;
+            right: -70px;
+            top: -70px;
+        }
+
+        img.back:nth-of-type(2) {
+            width: 120px;
+            top: -20px;
+            left: -50px;
+            z-index: 1;
+        }
+
+        img.back:nth-of-type(3) {
+            bottom: -80px;
+            left: 150px;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <article>
+            <div class="presentation">
+                <img src="sunflower.jpg" alt="Sunflower">
+                <h1>Sunflower</h1>
+            </div>
+            <div class="history">
+                <q>Helianthus is a genus comprising about 70 species of annual and perennial
+                    flowering plants in the daisy family Asteraceae. Except for three South American species, the
+                    species of Helianthus are native to North America and Central America. The common names "sunflower"
+                    and "common sunflower" typically refer to the popular annual species Helianthus annuus, whose round
+                    flower heads in combination with the ligules look like the sun.
+                </q>
+                <address>
+                    <strong>from:</strong> wiipedia.org
+                </address>
+            </div>
+            <img class="back" src="sunflower2.png" alt="Sunflower">
+            <img class="back" src="sunflower2.png" alt="Sunflower">
+            <img class="back" src="sunflower2.png" alt="Sunflower">
+        </article>
+
+    </main>
+
+</body>
+
+</html>
